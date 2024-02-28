@@ -1,0 +1,35 @@
+html 
+{
+    box-sizing: border-box;
+}
+* ,  *::before , *::before 
+{
+    box-sizing: inherit;
+}
+
+#outline 
+{
+    width: 700px;
+    height: 400px;
+    border: 1px solid black;
+    margin: 100px auto;
+    position: relative;
+}
+
+#paddle
+{
+    width: 13px;
+    height: 50px;
+    background-color: rgb(189, 62, 62);
+    margin-left: 12px;
+    position: absolute;
+}
+
+#ball
+{
+    width: 20px;
+    height: 20px;
+    background-color: rebeccapurple;
+    border-radius: 50%;
+    position: absolute;
+}
