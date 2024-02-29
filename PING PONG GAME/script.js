@@ -34,7 +34,7 @@ setInterval(function exec(){
 
 // LOGIC FOR PADDLE 
 
-let paddleY = 30;
+let topHeight = 30;
 let pdy = 20;
 
 // function paddleMovement(event)
@@ -53,19 +53,19 @@ document.addEventListener("keydown" , function paddleMovement(event){
 
     event.preventDefault();          // will prevent scroll bar from moving 
     // console.log("inside event");
-    
+
                                                                 // height of the paddle
-    if(event.keyCode == 40 && paddleY < outerBorder.offsetHeight - paddle.offsetHeight)   // down key
+    if(event.keyCode == 40 && topHeight < outerBorder.offsetHeight - paddle.offsetHeight)   // down key
     {
-        paddleY += pdy;
+        topHeight += pdy;
     }
-    else if(event.keyCode == 38 && paddleY > 0)    // up key
+    else if(event.keyCode == 38 && topHeight > 0)    // up key
     {
-        paddleY += pdy * (-1);
+        topHeight += pdy * (-1);    // decreasing the top height
     }
 
     // putting the updated value in the paddle ---> which will make it move up and down
-    paddle.style.top = `${paddleY}px`;
+    paddle.style.top = `${topHeight}px`;
 
 });
 
