@@ -1,0 +1,50 @@
+
+#parent_main_content
+{
+    margin:113px 0px 0px 0px;
+    padding: 0;
+}
+#parent_main_content h1
+{
+    font-size: 3.3rem;
+    letter-spacing: 1.1rem;
+    font-weight: bold;
+    text-shadow: 3px 2px 3px #2b8884;
+}
+
+.container
+{
+    /* background-color: var(--orange_red_medius); */
+    margin: 81px auto;
+    width: 41%;
+}
+
+.form_parent 
+{
+    width: 37rem;
+    margin: 0px auto;
+    height: 248px;
+    border-radius: 13px;
+    box-shadow: 2px 4px 11px #080606;
+    border: transparent;
+}
+
+#login_text
+{
+    margin-bottom: 12px;
+}
+#login_text h2
+{
+    font-size: 2.8rem;
+    letter-spacing: 6px;
+}
+.input-group
+{
+    padding-bottom: 12px;
+}
+
+.signup_btn
+{
+    margin-top: 24px;
+    font-size: 1.2rem;
+}

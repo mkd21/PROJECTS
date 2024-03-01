@@ -1,0 +1,110 @@
+.parent_container
+{
+    /* background-color: var(--bluish_grey); */
+    margin-top: 34px;
+}
+
+.allProdh2
+{
+    margin-bottom: 60px;
+}
+.sideBar
+{
+    /* background-color: rgb(9, 219, 222); */
+    width: 251px;
+}
+.sideBar h2 
+{
+    margin-bottom: 13px;
+}
+.categoryList a
+{   color: black;
+    text-decoration: none;
+    border-bottom: 1px solid red;
+    text-align: center;
+    background-color: var(--just_for_checking_bg);
+    font-size: 1.3rem;
+    line-height: 42px;
+}
+
+/* .child_filter
+{
+    background-color: blueviolet;
+} */
+.form-select
+{
+    flex-basis: 49%;
+}
+.reset_btn
+{
+    width: 100%;
+    margin-top: 16px;
+}
+
+.sideBar h2 , .searchbar , .categoryList > h3
+{
+    margin-bottom: 13px;
+}
+
+.filter_parent p
+{
+    margin:12px 0px 12px 0px;
+    font-weight: bold;
+}
+
+.prod_img_card
+{
+    /* background-color: chartreuse; */
+    flex-basis: 70%;
+}
+/* .cards
+{
+    background-color: rgb(19, 88, 225);
+} */
+.cards a 
+{
+    text-decoration: none;
+}
+
+.prod_card
+{
+    /* background-color: rgb(222, 0, 41); */
+    display: inline-block;
+    width: 23%;
+    margin: 23px 12px 10px 51px;
+    border:2px solid var(--ghost_white);
+    border-radius: 20%;
+    box-shadow: 0px 0px 0px black;
+    transition: box-shadow 0.1s linear;
+}
+.prod_card:hover
+{
+    box-shadow: 2px 2px 4px black;
+}
+
+.image_holder
+{
+    background-color: orange;
+    width: 70%;
+    margin: 30px auto;
+}
+.image_holder img
+{
+    width: 100%;
+}
+/* .cards img 
+{
+    width: 100%;
+    padding: 27px 27px 0px 27px;
+    height: 245px;
+} */
+
+.someProd , .price
+{
+    font-size: 1.3rem;
+    margin: 5px 0px 0px 8px;
+    letter-spacing: 2px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}

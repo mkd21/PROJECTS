@@ -1,0 +1,177 @@
+:root 
+{
+    --greyColor : #838383;
+    --skyGrey : #396696;
+}
+html
+{
+    box-sizing:border-box;
+}
+*,  *::after,*::before
+{
+    box-sizing: inherit;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+}
+#linkedin_post
+{
+    border: 2px solid red;
+    height: 500px;
+    padding: 1px 25px 25px 25px;
+    width: 33rem;
+    margin: 31px auto;
+}
+#someone_liked
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#someone_liked_image img
+{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 19px;
+}
+
+#someone_liked name p
+{
+    font-size: 1.2rem;
+}
+#someone_liked_name
+{
+    flex-grow: 1;
+}
+#three_dotted_icon
+{
+    font-size: 1.8rem;
+    padding:0px 11px 23px 0px;
+}
+
+.horizontal_line
+{
+    width: 100%;
+    height: 1px;
+    border: 1px solid black;
+}
+
+/*Actual Post Area*/
+#actual_post
+{
+    height: 200px;
+    margin:15px 0px 0px 0px;
+    /* border: 1px solid black; */
+}
+#my_img 
+{
+    margin-bottom:6px;
+}
+#my_img img
+{
+    width: 54px;
+    border-radius: 50%;
+    height: 50px;
+}
+#about_me
+{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    height: 70px;
+}
+    
+#me_and_designation
+{
+    max-width: 281px;
+}
+#tech_known
+{
+    margin: 0px 0px 0px 0px;
+    font-size: 0.9rem;
+}
+#name , #unicode
+{
+    display: inline;
+}
+#shared_with
+{
+    margin: 0px;
+}
+#shared_with svg 
+{
+    width: 16px;
+    height: 21px;
+}
+
+/*Follow Options*/
+
+#follow_option
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 47px;
+}
+
+#follow_option p
+{
+    display: inline;
+    font-weight: bolder;
+    color: #0956cf;
+    margin-left: 6px;
+
+}
+
+/* content of the post  */
+#description_of_post
+{
+    margin: 0px 0px 25px 0px;
+}
+/* Total Like and comments  */
+
+#total_likes_comment a
+{
+    text-decoration: none;
+}
+#total_likes_comment a:hover
+{
+    text-decoration: underline;
+}
+#parent_div_inside_like_comment_div
+{
+    display: flex;
+    justify-content: space-between;
+}
+#reaction_counter
+{
+  margin: 4px 0px 0px 5px;
+  flex-grow: 1;
+}
+
+/* like_comment_share_send */
+
+#icons_of_like_comment_share_repost
+{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0px 0px 0px;
+}
+
+.icon 
+{
+    font-size: 1.4rem;
+}
+.icon p , i 
+{
+    display: inline;
+    color: var(--greyColor);
+}
+.icon:hover
+{
+    background-color: var(--skyGrey);
+}

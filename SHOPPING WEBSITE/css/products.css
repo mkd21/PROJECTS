@@ -1,0 +1,56 @@
+.prod_parent
+{
+    /* background-color: var(--ghost_white); */
+    margin-top: 81px;
+}
+
+.images
+{
+    /* background-color: bisque; */
+    flex-basis: 40%;
+    height: 57%;
+}
+.images img 
+{
+    flex-basis: 80%;
+    width: 100%;
+    height: 100%;
+    border-radius: 31px;
+}
+
+.details_prod
+{
+    /* background-color: rgb(145, 116, 173); */
+    flex-basis: 50%;
+}
+.details_prod h1 
+{
+    font-size: 3.3rem;
+}
+.details_prod > p
+{
+    font-size: 2.7rem;
+}
+#prod_description
+{
+    padding-bottom: 19px;
+}
+.desc 
+{
+    color: var(--bluish_grey);
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+.decrip_dtls
+{
+    font-size: 1.3rem;
+    text-align: justify;
+}
+.action_btn1
+{
+    margin-bottom:16px;
+}
+.action_btn2 a
+{
+    text-decoration: none;
+}

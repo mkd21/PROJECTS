@@ -1,0 +1,64 @@
+html 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+* , *::before , *::after
+{
+    box-sizing: inherit;
+    margin: inherit;
+    padding: inherit;
+}
+body
+{
+    height: 100vh;
+    background-color: rgb(234, 185, 185);
+}
+#header 
+{
+    height: 60px;
+    background-color: rgb(255, 89, 0);
+}
+#header h1 
+{
+    text-align: center;
+}
+
+#mid_section
+{
+    display: flex;
+    /* background-color: rgb(158, 198, 232); */
+    justify-content: space-between;
+    height: 78.4vh;
+}
+
+#navigation
+{
+    background-color: rgb(255, 166, 0);
+}
+#main 
+{
+    background-color: rgb(255, 255, 130);
+    flex-grow: 1;
+    text-align: center;
+}
+
+#sidebar
+{
+    background-color: rgb(247, 161, 130);
+}
+#navigation , #sidebar 
+{
+    /* border: 1px solid black; */
+    width:100px;
+    text-align: center;
+}
+
+
+#footer 
+{
+    text-align: center;
+    background-color: grey;
+    height: 100px;
+}

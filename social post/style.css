@@ -1,0 +1,124 @@
+html 
+{
+    box-sizing: border-box;
+}
+
+* , *::after , *::before
+{
+    box-sizing: inherit;
+}
+body 
+{
+    margin: 0;
+    padding: 0;
+}
+
+            /* WHOLE TWEET  */
+            
+#parent
+{
+    border: 1px solid #cfd9de;
+    padding: 12px;
+    border-radius: 16px;
+    background-color: #fff;
+    display: flex;
+    gap: 12px;
+    height: 110px;
+    margin-top: 127px;
+    margin-left: 21%;
+    margin-right: 21%;
+}
+
+#user_icon
+{
+    /* border: 1px solid red; */
+    height: 45px;
+    width: 45px;
+}
+
+#user_icon img
+{
+    height: inherit;
+    width: inherit;
+    border-radius: 50%;
+}
+
+
+#remaining_part
+{
+    /* background-color: rgb(255, 192, 115); */
+    height: 120px;
+}
+
+                     /* NAME EMAIL AND DATE AREA OF THE TWEET  */
+
+#name_email_date
+{
+    display: flex;
+    gap: 4px;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 , p 
+{
+    margin:0px;
+}
+
+#name_email_date h1
+{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+}
+#name_email_date p
+{
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #71767b;
+}
+
+                /* MESSAGE SECTION  */
+
+#paragraph 
+{
+    margin-top:2px;
+}
+#paragraph p
+{
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+
+            /* INTERACTION PART  */
+
+
+#interaction_section_parent
+{
+    display: flex;
+    margin-top: 12px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 425px;
+}
+
+.icons
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#interaction_section_parent p 
+{
+    display:inline;
+    margin-left: 12px;
+    font-size: 13px;
+    color:#536471;
+    font-weight: bold;
+}
+#interaction_section_parent svg
+{
+    height: 16px;
+    width: 16px;
+}
