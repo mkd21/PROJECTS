@@ -4,7 +4,7 @@
     margin-top: 34px;
 }
 
-.allProdh2
+.allProd2
 {
     margin-bottom: 60px;
 }
@@ -52,6 +52,11 @@
     font-weight: bold;
 }
 
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+/* PRODUCT LIST CARD BEGINS */
+
 .prod_img_card
 {
     /* background-color: chartreuse; */
@@ -70,12 +75,14 @@
 {
     /* background-color: rgb(222, 0, 41); */
     display: inline-block;
-    width: 23%;
-    margin: 23px 12px 10px 51px;
-    border:2px solid var(--ghost_white);
-    border-radius: 20%;
+    width: 28%;
+    margin: 23px 5px 10px 15px;
+    border: 2px solid var(--ghost_white);
+    border-radius: 10%;
     box-shadow: 0px 0px 0px black;
     transition: box-shadow 0.1s linear;
+    text-decoration: none;
+    height: 331px;
 }
 .prod_card:hover
 {
@@ -85,13 +92,16 @@
 .image_holder
 {
     background-color: orange;
-    width: 70%;
+    width: 82%;
     margin: 30px auto;
+    height: 56%;
 }
 .image_holder img
 {
     width: 100%;
+    height: 100%;
 }
+
 /* .cards img 
 {
     width: 100%;
