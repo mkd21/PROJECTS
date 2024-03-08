@@ -1,6 +1,6 @@
 // console.log("js is connected..");
 
-document.addEventListener("DOMContentLoaded" , () => {
+document.addEventListener("DOMContentLoaded" , async  () => {
 
     // function to call the api 
 
@@ -11,11 +11,18 @@ document.addEventListener("DOMContentLoaded" , () => {
         return products.data;
     }
 
+    let productListOneTime =  await getAPI();
 
-    async function populateCards()
+    async function populateCards(flag , productList)
     {
-        let response = await getAPI();
-        console.log(response);
+        let response = productList;
+
+        if(flag == true)  // true means the filter is not selected by the user
+        {
+            // response = await getAPI();
+            response = productListOneTime;
+        }
+        // console.log(response);
 
         const parentDiv = document.getElementById("prod_img_card_parent");
 
@@ -70,5 +77,37 @@ document.addEventListener("DOMContentLoaded" , () => {
         });
     }
 
-    populateCards();
+    populateCards(true);
+
+
+    // TO SET THE FILTER 
+
+    
+
+    let searchBtn = document.getElementById("search");
+
+    searchBtn.addEventListener("click" , () => {
+        
+        let minValue = Number(document.getElementById("minValue").value);  // return type will be string so converted into NUMBER
+        let maxValue = Number(document.getElementById("maxValue").value);  // return type will be string so converted into NUMBER
+
+        // let products = await getAPI();
+        let products = productListOneTime;
+
+        console.log(products);
+
+        let filteredProducts = products.filter( (productsElement) => {
+            // return productsElement.price >= minValue &&  productsElement.price <= maxValue;
+            if(productsElement.price >= minValue &&  productsElement.price <= maxValue)
+            {
+                return productsElement;
+            }
+        });
+
+        console.log(filteredProducts);
+        let parentCardHolder = document.getElementById("prod_img_card_parent");
+        parentCardHolder.innerHTML = "";
+        populateCards(false , filteredProducts);
+    });
+      
 });
