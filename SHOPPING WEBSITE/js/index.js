@@ -18,16 +18,22 @@ fetchCategory();
 async function fillCategories()
 {
     const categories = await fetchCategory();
+    console.log(categories);
 
     let parentCategoryDiv = document.getElementById("category_list");
 
-    categories.forEach(function (categories){
+    categories.forEach(function (categoriesIterator){
+        
         let categoryDiv = document.createElement("div");
-        let categoryAnchor = document.createElement("a");
 
-        // categoryAnchor.href = "#";
-        categoryAnchor.textContent = categories;
+        // this will make sure that the user gets directed to particular category 
+        let categoryAnchor = document.createElement("a"); 
+        categoryAnchor.href = `All_product.html?category=${categoriesIterator}`;
+        categoryAnchor.target = "_blank";
 
+        
+        categoryAnchor.textContent = categoriesIterator;
+        
         categoryDiv.appendChild(categoryAnchor);
 
         parentCategoryDiv.appendChild(categoryDiv);

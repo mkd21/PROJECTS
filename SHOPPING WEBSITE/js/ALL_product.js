@@ -12,17 +12,45 @@ document.addEventListener("DOMContentLoaded" , async  () => {
     }
 
     let productListOneTime =  await getAPI();
+    
+    // will help when user wants to apply filter inside a particular section of product
+    let signalForFilter = false;
+    let customArr = [];
+    // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+    async function categoryBasedFetch(category)
+    {   
+        let res = await axios.get(`https://fakestoreapi.com/products/category/${category}`);
+        signalForFilter = true;
+        return res.data;
+    }
+    
     async function populateCards(flag , productList)
     {
+
         let response = productList;
 
-        if(flag == true)  // true means the filter is not selected by the user
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const QueryparamObj = Object.fromEntries(urlSearchParams.entries());
+
+        if(flag == true)       // true means the filter is not selected by the user
         {
-            // response = await getAPI();
-            response = productListOneTime;
+
+            if(QueryparamObj['category'])
+            {
+                response = await categoryBasedFetch(QueryparamObj['category']);
+                
+                for( let i in response)
+                {
+                    customArr.push(response[i]);
+                }
+                console.log(customArr);
+            }
+            else 
+            {
+                response = productListOneTime;
+            }
         }
-        // console.log(response);
 
         const parentDiv = document.getElementById("prod_img_card_parent");
 
@@ -39,6 +67,7 @@ document.addEventListener("DOMContentLoaded" , async  () => {
             const imgTag = document.createElement("img");
             imgTag.src = product.image;
 
+            // if size of product name will be greater than 14 then ... will be added after 10 characters 
             if(product.title.length > 14)
             {
                 let newtitle = product.title.substring(0 , 10);
@@ -51,7 +80,7 @@ document.addEventListener("DOMContentLoaded" , async  () => {
                 ProductNameDiv.textContent = product.title;
             }
 
-            priceDiv.textContent = `&#8377; ${product.price}`;
+            priceDiv.textContent = `$${product.price}`;
 
 
             // adding classes 
@@ -82,8 +111,6 @@ document.addEventListener("DOMContentLoaded" , async  () => {
 
     // TO SET THE FILTER 
 
-    
-
     let searchBtn = document.getElementById("search");
 
     searchBtn.addEventListener("click" , () => {
@@ -92,22 +119,45 @@ document.addEventListener("DOMContentLoaded" , async  () => {
         let maxValue = Number(document.getElementById("maxValue").value);  // return type will be string so converted into NUMBER
 
         // let products = await getAPI();
+        
         let products = productListOneTime;
 
-        console.log(products);
+        if(signalForFilter == true)
+        {
+            products = customArr;
+            console.log(products);
+        }
 
         let filteredProducts = products.filter( (productsElement) => {
-            // return productsElement.price >= minValue &&  productsElement.price <= maxValue;
+           
             if(productsElement.price >= minValue &&  productsElement.price <= maxValue)
             {
                 return productsElement;
             }
         });
 
-        console.log(filteredProducts);
+        // console.log(filteredProducts);
         let parentCardHolder = document.getElementById("prod_img_card_parent");
         parentCardHolder.innerHTML = "";
         populateCards(false , filteredProducts);
+    });
+
+
+    // CLEAR FILTER BUTTON
+
+    let resetBtn = document.getElementById("reset");
+
+    resetBtn.addEventListener("click" , () => {
+
+        // let minVAlueSection = document.getElementById("minValue");
+        // let maxVAlueSection = document.getElementById("maxValue");
+
+        // minVAlueSection.selectedIndex = 0;
+        // maxVAlueSection.selectedIndex = 0;
+
+        
+        // this is method 2 to reset the buttons
+        location.reload();
     });
       
 });
