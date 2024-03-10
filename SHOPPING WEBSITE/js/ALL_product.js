@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded" , async  () => {
             {
                 response = await categoryBasedFetch(QueryparamObj['category']);
                 
+                // this part is for filter functionality on specific product section 
                 for( let i in response)
                 {
                     customArr.push(response[i]);
