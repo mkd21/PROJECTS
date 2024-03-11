@@ -27,7 +27,50 @@ body
     --tropical_indigo:#A99AEA;
     --ghost_white:#ced7f5;
 }
+.loaderParent 
+{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(188,133,163, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.spinner 
+{
+    width: 200px;
+    height: 200px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: rgb(240, 231, 231) rgb(128, 174, 218);
+    border-radius: 50%;
+    animation-name: rotate;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate 
+{
+    0%
+    {
+        /* width: 200px;
+        height: 200px; */
+        rotate: 0deg;
+    }
+    50%{
+        /* width: 400px;
+        height: 400px; */
+        rotate: 180deg;
+    }
+    100% 
+    {
+        /* width: 200px;
+        height: 200px; */
+        rotate: 360deg;
+    }
+}
 #header
 {
     padding: 12px 109px 12px 130px;
@@ -53,3 +96,7 @@ body
 {
     margin-left:32px;
 }
+
+
+/* Styling for loader  */
+

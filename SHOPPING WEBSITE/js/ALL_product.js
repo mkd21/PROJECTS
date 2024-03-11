@@ -25,6 +25,15 @@ document.addEventListener("DOMContentLoaded" , async  () => {
         return res.data;
     }
     
+    // for sidebar category 
+    async function getCategories()    // calling the API
+    {
+        let res = await axios.get("https://fakestoreapi.com/products/categories");
+
+        return res.data;
+    }
+
+
     async function populateCards(flag , productList)
     {
 
@@ -53,6 +62,8 @@ document.addEventListener("DOMContentLoaded" , async  () => {
             }
         }
 
+        console.log("executed");
+       
         const parentDiv = document.getElementById("prod_img_card_parent");
 
         response.forEach(product =>{
@@ -107,8 +118,33 @@ document.addEventListener("DOMContentLoaded" , async  () => {
         });
     }
 
-    populateCards(true);
+    async function populateSideBar()      // Downloading the contents of API
+    {
+        let response = await getCategories();
 
+        const sidebar = document.getElementById("sideBarParent");
+
+        response.forEach( (categories) => {
+            let anchor = document.createElement("a");
+            anchor.textContent = categories;
+            anchor.href = `All_product.html?category=${categories}`;
+
+            sidebar.appendChild(anchor);
+            sidebar.classList.add("categoryList" , "d-flex" ,  "flex-column");
+        });
+    }
+
+
+    async function combined()
+    {
+        Promise.all([populateCards(true) , populateSideBar()])
+        .then( () => {
+            let loader = document.getElementById("loader");
+            loader.style.display = "none";
+        });
+    }
+
+    combined();
 
     // TO SET THE FILTER 
 
@@ -144,6 +180,8 @@ document.addEventListener("DOMContentLoaded" , async  () => {
     });
 
 
+
+    
     // CLEAR FILTER BUTTON
 
     let resetBtn = document.getElementById("reset");
@@ -161,4 +199,12 @@ document.addEventListener("DOMContentLoaded" , async  () => {
         location.reload();
     });
       
+
+
+
+  
+
+    
+
+
 });

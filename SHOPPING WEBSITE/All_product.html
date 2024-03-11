@@ -13,13 +13,21 @@
 </head>
 <body>
     
+    <!-- LOADER  -->
+
+    <div id="loader" class = "loaderParent">
+        <div class="spinner">
+            
+        </div>
+    </div>
+
     <!-- NAV  -->
 
     <nav id="header">
         <div class="container-fluid bg_color_nav ">
             <div class="d-flex justify-content-between">
                 <div class="logo">
-                    <h3>Shop Cart</h3>
+                    <a href = "index.html"> <h3>Shop Cart</h3> </a>
                 </div>
 
                 <div class="other_options d-flex">
@@ -47,14 +55,16 @@
                                 <input type="text" class="form-control" placeholder="search product">
                             </div>
                         
-                            <div class="categoryList d-flex flex-column">
+                            <div id = "sideBarParent" class="categoryList d-flex flex-column">
 
                                 <h3>Categories</h3>
-                                <a href="productDetails.html">Kitchen Ware</a>
-                                <a href="productDetails.html">Appliances</a>
-                                <a href="#">Sports</a>
-                                <a href="#">Men's Fashion</a>
-                                <a href="#">Women's Fashion</a>
+
+                                <!-- will be loaded by JS  -->
+                                <!-- <a href="All_product.html?category=electronics">Electronic</a>
+                                <a href="productDetails.html">Jewellery</a>
+                                <a href="#">Men's Clothing</a>
+                                <a href="#">woMen's Fashion</a> -->
+
                             </div>
                         
                             <section class="filter_parent">

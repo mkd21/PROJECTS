@@ -14,11 +14,14 @@ async function fetchCategory()   // whole async function returns a promise
 
 fetchCategory();
 
-
 async function fillCategories()
 {
     const categories = await fetchCategory();
     console.log(categories);
+
+    // for loader visiblity
+    const loader = document.getElementById("loader");
+    loader.style.display = "none";
 
     let parentCategoryDiv = document.getElementById("category_list");
 
