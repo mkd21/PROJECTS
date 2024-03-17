@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded" , async  () => {
 
         let response = productList;
 
-        const urlSearchParams = new URLSearchParams(window.location.search);
-        const QueryparamObj = Object.fromEntries(urlSearchParams.entries());
+        // coming form common.js
+        let QueryparamObj = getQueryParams();
 
         if(flag == true)       // true means the filter is not selected by the user
         {
@@ -54,22 +54,20 @@ document.addEventListener("DOMContentLoaded" , async  () => {
                 {
                     customArr.push(response[i]);
                 }
-                console.log(customArr);
+                // console.log(customArr);
             }
             else 
             {
                 response = productListOneTime;
             }
         }
-
-        console.log("executed");
        
         const parentDiv = document.getElementById("prod_img_card_parent");
 
         response.forEach(product =>{
 
             const anchor = document.createElement("a");
-            anchor.href = "productDetails.html";
+            anchor.href = `productDetails.html?id=${product.id}`;
             anchor.target = "_blank";
 
             const imageDIv = document.createElement("div");

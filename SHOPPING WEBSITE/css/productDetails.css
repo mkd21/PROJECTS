@@ -2,13 +2,14 @@
 {
     /* background-color: var(--ghost_white); */
     margin-top: 81px;
+    height: 544px;
 }
 
 .images
 {
     /* background-color: bisque; */
     flex-basis: 40%;
-    height: 57%;
+    height: 73%;
 }
 .images img 
 {
@@ -25,11 +26,11 @@
 }
 .details_prod h1 
 {
-    font-size: 3.3rem;
+    font-size: 1.7rem;
 }
 .details_prod > p
 {
-    font-size: 2.7rem;
+    font-size: 1.4rem;
 }
 #prod_description
 {
@@ -45,12 +46,14 @@
 {
     font-size: 1.3rem;
     text-align: justify;
+    padding:23px;
+    overflow: scroll;
 }
-.action_btn1
+.addto_cart
 {
     margin-bottom:16px;
 }
-.action_btn2 a
+.goto_cart
 {
     text-decoration: none;
 }

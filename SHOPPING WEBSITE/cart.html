@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    
+    <!-- LOADER  -->
+
+    <div id="loader" class = "loaderParent">
+        <div class="spinner">
+            
+        </div>
+    </div>
+
+
+    
+    <!-- NAV BAR -->
+    <nav id="header">
+        <div class="container-fluid bg_color_nav ">
+            <div class="d-flex justify-content-between">
+                
+                    <div class="logo">
+                        <a href="index.html"><h3> Shop Cart </h3></a>
+                    </div>
+                
+
+                <div class="other_options d-flex">
+                    <a href="Cart.html" class="text-decoration-none">Account</a>
+                    <a href="login.html" class="text-decoration-none">Cart</a>
+                    <a href="logout.html" class="text-decoration-none" id="lg_out">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- contents  -->
+
+    <div class="container-fluid parentDiv">
+
+        <div class="cartHeader container">
+            <h2>Your Cart</h2>
+        </div>
+
+        <div class="actualDIv container-fluid">
+
+            <div id="parentDivForProductSection" class="productsList container">
+
+                <p class="order_Details">Order Details</p>
+
+                <hr>
+
+                <!-- <div class="product">
+
+                    <div class="prod_img_div">
+                        <img class="image_Tag" src="images/product details page image/prod_dtls_img.jpg" alt="product image">
+                    </div>
+
+                    <div class="prod_details">
+                        <p class="Details">Some Product</p>
+                        <p class="Details" >&dollar;10000</p>    
+                    </div>  
+
+                    <div class="quantityAndRemove">
+                        <p class="quantityPara" >Quantity</p>
+                        <select name="" id="" class="form-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected="true">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+    
+                        <button class=" btn btn-danger">Remove</button>
+                    </div>
+                    
+                </div> -->
+
+                <!-- <hr> -->
+
+            </div>
+    
+            <div class="totalPrice_btnDiv ">
+                
+                <div class="priceDetails">Price Details</div>
+
+                <div class="totalPrice">
+
+                    <div class="priceAndAllRepresentationDIV">
+                        <p>Total Price</p>
+                        <p>Discount</p>
+                        <p>Delivery Charges</p>
+                        <p>Final Price</p>
+                    </div>
+
+                     <div class="ActualPriceAndallDIV">
+                        <p id = "price"></p>
+                        <p>10</p>
+                        <p>FREE</p>
+                        <p id="totalPrice"></p>
+                    </div>
+
+                </div>
+
+                <div class="buttonsDiv">
+                    <button class="continueShoppingBtn btn btn-info">Continue Shopping</button>
+                    <button class="checkoutBtn btn btn-primary">Checkout</button>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <script src="js/cart.js"></script>
+    <script src="js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
