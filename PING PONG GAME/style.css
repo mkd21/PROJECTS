@@ -24,13 +24,21 @@ html
     background-color: white;
 }
 
-#paddle
+#paddleLeft , #paddleRight
 {
     width: 13px;
     height: 100px;
     background-color: rgb(189, 62, 62);
     margin-left: 3px;
     position: absolute;
+}
+#paddleRight
+{
+    width: 13px;
+    height: 100px;
+    background-color: rgb(189, 62, 62);
+    position: absolute;
+    left : 677px;
 }
 
 #ball
