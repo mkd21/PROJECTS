@@ -1,0 +1,83 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+html
+{
+    box-sizing: border-box;
+}
+*, *:before, *:after 
+{
+    box-sizing: inherit;
+}
+
+#parent 
+{
+    border: 1px solid black;
+    margin: 139px auto;
+    width: 633px;
+}
+
+                    /* SEARCH BAR SECTION */
+#searchBar
+{
+    /* border: 1px solid red; */
+    background-color: antiquewhite;
+    height: 52px;
+    margin: 0px 0px 0px 51px;
+}
+
+.textArea{
+    position: relative;
+    padding-left: 27px;
+    background-color: black;
+    height: 31px;
+    width: 220px;
+    border-radius: 23px;
+    color: whitesmoke;
+    margin: 12px 0px 0px 0px;
+}
+.textArea::placeholder
+{
+    color: wheat;
+}
+
+.searchIcon{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    margin: 19px 0px 0px 8px;
+}
+    
+
+                    
+                    /* WEATHER DETAILS SECTION */
+#WeatherDetails
+{
+    background-color: rgb(43, 226, 177);
+    margin: 60px 40px 40px 59px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#WeatherDetails p 
+{
+    display: inline;
+}
+
+                     /* BOTTOM SECTION */
+
+#weatherDetailsExtras
+{
+    background-color: burlywood;
+}
+
