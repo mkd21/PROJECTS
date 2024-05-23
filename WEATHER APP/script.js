@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded" , () =>{
     let maxTemp = document.querySelector(".maxTemp");
 
 
-    desiredLocation.innerText = "Pune, India";
+    // desiredLocation.innerText = "Pune";
 
     let date = new Date();
     console.log(date);
@@ -26,14 +26,15 @@ document.addEventListener("DOMContentLoaded" , () =>{
             
             // destructuring to get the desired data from the object 
             let {main , name , weather , wind , sys , dt} = result;
+
+            // will set the city name and country 
             desiredLocation.innerText = `${name}, ${sys.country}`;
             
         }
         catch(err)
         {
-            console.log(err);
+            console.log("API galat diya hai",err);
         }
-
         
     }
     getWeather();

@@ -35,17 +35,21 @@ html
 
 .textArea{
     position: relative;
-    padding-left: 27px;
+    padding-left: 31px;
+    padding-top: 6px;
     background-color: black;
     height: 31px;
     width: 220px;
+    border: none;
     border-radius: 23px;
     color: whitesmoke;
     margin: 12px 0px 0px 0px;
+
 }
 .textArea::placeholder
 {
     color: wheat;
+    font-size: 17px;
 }
 
 .searchIcon{
@@ -56,7 +60,7 @@ html
 }
     
 
-                    
+    
                     /* WEATHER DETAILS SECTION */
 #WeatherDetails
 {

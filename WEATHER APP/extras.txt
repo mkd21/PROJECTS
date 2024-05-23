@@ -1,0 +1,9 @@
+--> object destructuring is used to extract the useful data's from the objects which have very large number of key value pairs which are not useful for current usecase 
+
+
+we have internationalisation API in js 
+
+IN JS WE HAVE AN Intl object 
+
+it is used for formatting data and time , strings , numbers and more in a way that's sensitive to different languages and cultures. 
+It contains different tools for these tasks, making it easier for developers to work with international content in their web applications.
