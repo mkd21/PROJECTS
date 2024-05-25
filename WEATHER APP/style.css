@@ -76,6 +76,7 @@ html
 #WeatherDetails p 
 {
     display: inline;
+    margin-right: 34px;
 }
 
                      /* BOTTOM SECTION */
@@ -84,4 +85,3 @@ html
 {
     background-color: burlywood;
 }
-
