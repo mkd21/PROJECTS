@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body 
 {
     margin: 0;
@@ -5,7 +6,8 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background-color : #2c2727;
+    /* height: 100vh; */
 }
 
 html
@@ -20,15 +22,17 @@ html
 #parent 
 {
     border: 1px solid black;
-    margin: 139px auto;
+    margin: 39px auto;
     width: 633px;
+    border-radius: 27px;
+    background-color: whitesmoke;
 }
 
                     /* SEARCH BAR SECTION */
 #searchBar
 {
     /* border: 1px solid red; */
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     height: 52px;
     margin: 0px 0px 0px 51px;
 }
@@ -64,24 +68,71 @@ html
                     /* WEATHER DETAILS SECTION */
 #WeatherDetails
 {
-    background-color: rgb(43, 226, 177);
-    margin: 60px 40px 40px 59px;
-    height: 250px;
+    /* background-color: rgb(43, 226, 177); */
+    margin: 30px 40px 40px 59px;
+    /* height: 250px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.currentDate
+{
+    margin-bottom: 0px;
+}
+.currentWeather
+{
+    background-color: black;
+    width: 60px;
+    text-align: center;
+    height: 32px;
+    border-radius: 23px;
+    padding-top: 7px;
+    margin: 3px 0px 8px 0px;
+    font-size: 16px;
+    color: white;
+}
+.desiredLocation
+{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    margin: 0px;
+}
 
 #WeatherDetails p 
 {
     display: inline;
-    margin-right: 34px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+.minTemp
+{
+    margin-right: 23px;
 }
 
                      /* BOTTOM SECTION */
 
 #weatherDetailsExtras
 {
-    background-color: burlywood;
+    /* background-color: burlywood; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.cards
+{
+    width: 293px;
+    margin: 9px 0px 13px 15px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 15px #608b0d;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.cards i 
+{
+    font-size: 30px;
+    margin: 13px;
 }

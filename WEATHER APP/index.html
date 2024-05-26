@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Application</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+        
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -22,7 +25,7 @@
         <section id="WeatherDetails">
 
             <h1 class="desiredLocation">Your Desired Country Name</h1>
-            <p class="currentDate">Date</p>
+            <p class="currentDate">Sun May 26 2024 22:34:53</p>
             <p class="currentWeather">Haze</p>
 
             <img src="" alt="Weather Image">
@@ -39,31 +42,51 @@
         <!-- BOTTOM SECTION -->
 
         <section id="weatherDetailsExtras">
-            <div>
-                <img src="" alt="">
-                <p>Feels Like</p>
-                <p>234 degree</p>
-            </div>
 
-            <div>
-                <img src="" alt="">
-                <p>Humidity</p>
-                <p>234 degree</p>
-            </div>
+            <div class="cards">
 
-            <div>
+                    <i class="fa-solid fa-temperature-three-quarters"></i>
                 
-                <img src="" alt="">
-                <p>Wind</p>
-                <p>234 degree</p>
+                <div class="details">
+                    <p>Feels Like</p>
+                    <p class="apiFetchedTemperature">234 &deg;</p>
+                </div>
+
             </div>
 
-            <div>
-                
-                <img src="" alt="">
-                <p>Pressure</p>
-                <p>234 degree</p>
+            <div class="cards">
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                <div class="details">
+                    <p>Humidity</p>
+                    <p class="apiFetchedTemperature">234 &deg;</p>
+                </div>
+
             </div>
+
+            <div class="cards">
+                
+                    <i class="fa-solid fa-wind"></i>
+                
+
+                <div class="details">
+                    <p>Wind</p>
+                    <p class="apiFetchedTemperature">234 &deg;</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                
+                    <i class="fa-solid fa-gauge-high"></i>
+
+                <div class="details">
+                    <p>Pressure</p>
+                    <p class="apiFetchedTemperature">234 &deg;</p>
+                </div>
+
+            </div>
+
         </section>
 
     </div>

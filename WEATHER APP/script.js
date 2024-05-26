@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded" , () =>{
 
+    let searchBarData = document.querySelector(".textArea");
+
     let desiredLocation = document.querySelector(".desiredLocation");
     let currentDate = document.querySelector(".currentDate");
     let currentWeather = document.querySelector(".currentWeather");
@@ -10,12 +12,13 @@ document.addEventListener("DOMContentLoaded" , () =>{
     let minTemp = document.querySelector(".minTemp");
     let maxTemp = document.querySelector(".maxTemp");
 
+    let APIfetchedTemperature = document.querySelectorAll(".apiFetchedTemperature");
+    // console.log(APIfetchedTemperature);
     
     let getCountryNameinFull = (code) =>{
 
         let countryName = new Intl.DisplayNames([code], { type: 'region' });
         return countryName.of(code);
-
     }
     
     // for date and time (using internalationalisation object in js)
@@ -29,7 +32,7 @@ document.addEventListener("DOMContentLoaded" , () =>{
     }
     let dateAndtime = (dt) =>{
 
-        // we have got date in the form of seconds, which needs to be converted into milliseconds first and get the date in real format. for that we use Date() object 
+        // we have got date in the form of seconds, which needs to be converted into milliseconds first and then get the date in real format. for that we use Date() object 
         let dateInMilliseconds = new Date(dt * 1000);
         console.log(dateInMilliseconds);
 
@@ -38,11 +41,26 @@ document.addEventListener("DOMContentLoaded" , () =>{
         return englishDate;
     };
 
+    let city = "Pune";
+    
+    searchBarData.addEventListener("keyup" , (e)=>{
+        // console.log(e.target);
+        if(e.key == "Enter")
+            {
+                console.log(e.target);
+                console.log(e.target.value);
+                city = e.target.value;
+                getWeather();
+                e.target.value = "";
+            }
+    })
+
+
     let getWeather = async () =>{
         
         try 
         {
-            let res = await fetch("https://api.openweathermap.org/data/2.5/weather?q=Delhi&APPID=9af8bcbaea5a2e3ddeef1b03bd13e6f1");
+            let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=9af8bcbaea5a2e3ddeef1b03bd13e6f1`);
             
             let result = await res.json();
             console.log(result); 
@@ -80,6 +98,32 @@ document.addEventListener("DOMContentLoaded" , () =>{
 
             minTemp.innerHTML = `Min: ${(main.temp_min - 273.15).toFixed(1)}&#176 C`;
             maxTemp.innerHTML = `Max: ${(main.temp_max - 273.15).toFixed(1)}&#176 C`;
+
+
+                                    // bottom details 
+                
+            let celciusTEmperatures = [];
+
+            celciusTEmperatures.push((main.feels_like - 273.15).toFixed(1));
+            celciusTEmperatures.push(main.humidity);
+            celciusTEmperatures.push(wind.speed);
+            celciusTEmperatures.push(main.pressure);
+
+            console.log(celciusTEmperatures);
+            celciusTEmperatures.forEach( (value , index) =>{
+                if(index == 0){
+                    APIfetchedTemperature[index].innerHTML = `${value} &#176`;
+                }
+                else if(index == 1){
+                    APIfetchedTemperature[index].innerHTML = `${value} %`;
+                }
+                else if(index == 2){
+                    APIfetchedTemperature[index].innerHTML = `${value} m/s`;
+                }
+                else{
+                    APIfetchedTemperature[index].innerHTML = `${value} hPa`;
+                }
+            })
         }
         catch(err)
         {
@@ -87,6 +131,7 @@ document.addEventListener("DOMContentLoaded" , () =>{
         }
         
     }
+
     getWeather();
     
 });
