@@ -1,0 +1,77 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(60, 57, 57);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html 
+{
+    box-sizing: border-box;
+}
+* , *:before , *:after 
+{
+    box-sizing: inherit;
+}
+
+#parent
+{
+    border: 1px solid rgb(228, 219, 219);
+    border-radius: 23px;
+    height: 400px;
+    width: 400px;
+    padding-top: 23px;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(42,120,223,1) 55%, rgba(51,45,253,1) 100%);
+}
+#searchSection
+{
+    /* background-color: blanchedalmond; */
+    margin-bottom: 11px;
+    height: 50px;
+    padding-right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#searchSection > input
+{
+    border-radius: 23px;
+    height: 33px;
+    width: 268px;
+    padding-left: 12px;
+    font-weight: 700;
+    border: navajowhite;
+    background-color: honeydew;
+    color: cornflowerblue;
+}
+#searchSection > button
+{
+    border-radius: 50%;
+    width: 43px;
+    height: 39px;
+    padding-top: 6px;
+    border: none;
+}
+#searchSection button:hover 
+{
+    cursor: pointer;
+}
+
+#imageSection
+{
+    /* background-color: yellow; */
+    text-align: center;
+}
+#degree_City_country
+{
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 25px;
+    color: whitesmoke;
+}
